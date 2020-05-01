@@ -5,8 +5,6 @@ public class Triangle {
 	private int side1;
 	private int side2;
 	private int side3;
-	
-	
 	public int getSide1() {
 		return side1;
 	}
@@ -25,11 +23,10 @@ public class Triangle {
 	public void setSide3(int side3) {
 		this.side3 = side3;
 	}
-	public void draw() {
+	
+	public void draw(){
 		System.out.println("Side1 is: "+side1);
 		System.out.println("Side2 is: "+side2);
 		System.out.println("Side3 is: "+side3);
-		
 	}
-	
 }

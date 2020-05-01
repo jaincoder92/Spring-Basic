@@ -1,6 +1,5 @@
 package org.spring.client;
 
-import java.io.File;
 
 import org.spring.beans.Triangle;
 import org.springframework.beans.factory.BeanFactory;

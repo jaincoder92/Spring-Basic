@@ -1,6 +1,7 @@
 package org.spring.client;
 
 import org.spring.beans.Triangle;
+import org.spring.beans.Triangle1;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
