@@ -13,7 +13,7 @@ public class SpringClient15 {
 		AbstractApplicationContext context = new FileSystemXmlApplicationContext("src/main/resources/spring14.xml");
 		context.registerShutdownHook();
 		Triangle3 triangle3 = (Triangle3) context.getBean("triangle3");
-		
+		triangle3.show();
 		
 	}
 }
