@@ -14,7 +14,8 @@ public class SpringClient20 {
 
 	public static void main(String[] args) {
 		
-		ApplicationContext context = new FileSystemXmlApplicationContext("src/main/resources/spring18.xml");
+		AbstractApplicationContext context = new FileSystemXmlApplicationContext("src/main/resources/spring18.xml");
+		context.registerShutdownHook();
 		Rectangle2 rectangle2 = (Rectangle2) context.getBean("rectangle2");
 		rectangle2.show();
 		

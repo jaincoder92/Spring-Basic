@@ -12,7 +12,7 @@
     >
 <context:annotation-config />
 
-<bean id="rectangle2" class="org.spring.beans.Rectangle2">
+<bean id="rectangle2" class="org.spring.beans.Rectangle2" init-method="init" destroy-method="clear">
 		
 </bean> 
 

@@ -1,11 +1,15 @@
 package org.spring.beans;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-public class Rectangle2 implements Shape{
+public class Rectangle2 implements Shape, InitializingBean, DisposableBean{
 
 	@Autowired
 	@Resource
@@ -51,4 +55,33 @@ public class Rectangle2 implements Shape{
 		System.out.println("Rentangle Point4 is: "+point4);
 	}
 	
+	@PostConstruct
+	public void postconstruct(){
+		System.err.println("#### PostConstruct ####");
+	}
+	
+	@PreDestroy
+	public void predestroy(){
+		System.err.println("==== PreDestroy ====");
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.err.println("#### afterPropertiesSet ####");
+		
+	}
+	
+	@Override
+	public void destroy() throws Exception {
+		System.err.println("==== destroy ====");
+		
+	}
+
+	public void init(){
+		System.err.println("#### init ####");
+	}
+	
+	public void clear(){
+		System.err.println("==== clear ====");
+	}
 }
