@@ -1,5 +1,7 @@
 package org.spring.beans;
 
+import org.springframework.stereotype.Component;
+
 public class Point {
 
 	private int x;

@@ -10,14 +10,22 @@
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
     "
     >
+<context:annotation-config />
 
 <bean id="rectangle" class="org.spring.beans.Rectangle">
 		
 </bean> 
 
 <bean id="point" class="org.spring.beans.Point">
+	<qualifier value="pointRelated" />
 	<property name="x" value="10" />
 	<property name="y" value="15" />
+</bean> 
+
+<bean id="centerpoint" class="org.spring.beans.Point">
+	<qualifier value="circleRelated" />
+	<property name="x" value="200" />
+	<property name="y" value="200" />
 </bean> 
 
 <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"   />

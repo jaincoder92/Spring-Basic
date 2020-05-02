@@ -1,16 +1,21 @@
 package org.spring.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Rectangle implements Shape{
 
 	@Autowired
+	@Qualifier("circleRelated")
 	private Point point1;
 	@Autowired
+	@Qualifier("circleRelated")
 	private Point point2;
 	@Autowired
+	@Qualifier("circleRelated")
 	private Point point3;
 	@Autowired
+	@Qualifier("pointRelated")
 	private Point point4;
 	public Point getPoint1() {
 		return point1;
